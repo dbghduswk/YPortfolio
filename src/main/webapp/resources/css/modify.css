@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+img{
+    vertical-align: top;
+    border: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.wrap{
+	width: 100%;
+}
+
+.modify{
+	width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 50px;
+}
+
+
+.modify table{
+	width: 500px;
+	height: 500px;
+	margin-bottom: 20px;
+}
+
+.modify table .name{
+	text-align: center;
+}
+
+
+#title{
+	width: 400px;
+}
+#title, #content{
+	border: 0;
+	outline: none;
+}
+
+#content{
+	width: 400px;
+	height: 300px;
+}

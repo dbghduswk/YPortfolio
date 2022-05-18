@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="org.yhy.dao.ReplyDao">
+  
+  	<insert id="add">
+  		insert into reply(reply,replyer,bno)
+  		values(#{reply},#{replyer},#{bno})
+  	</insert>
+  	<select id="list" resultType="org.yhy.model.ReplyDTO">
+  		select *
+  		from reply
+  		where bno=#{bno}
+  	</select>
+  	<select id="detail" resultType="org.yhy.model.ReplyDTO">
+  		select *
+  		from reply
+  		where rno=#{rno}
+  	</select>
+  	
+  	<update id="modify">
+  		update reply
+  		set reply = #{reply}
+  		where rno = #{rno}
+  	</update>
+  	<delete id="remove">
+  		delete from reply
+  		where rno=#{rno}
+  	</delete>
+  </mapper>

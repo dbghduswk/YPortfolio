@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="org.yhy.dao.MemberDao">
+	<insert id="MemberInsert">
+		insert into Member(userid,passwd,username,gender)
+		values(#{userid},#{passwd},#{username},#{gender})
+	</insert>
+	<select id="Memberlogin" resultType="org.yhy.model.MemberDTO">
+		select *
+		from Member
+		where userid =#{userid}
+		and passwd = #{passwd}
+	</select>
+</mapper>
